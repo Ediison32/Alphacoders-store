@@ -99,6 +99,73 @@ footer div {
     gap: 1rem;
 }
 
+/*=====CONTACTAME======*/
+
+.contactanos{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 222px;
+    max-width: 900px;
+    margin-bottom: 331px;
+    margin-inline: auto;
+}
+.contactanos > * {
+    flex: 1;
+}
+
+.contactanos form{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.contactanos label{
+    color: rgb(106, 104, 104);
+}
+.contactanos .labels{
+    display: flex;
+    flex-direction: column;
+}
+.contactanos form .height1{
+    padding: 5px;
+}
+
+.contactanos form .full-width{
+    grid-column-start: 1;
+    grid-column-end:3 ;
+}
+.contactanos input , textarea{
+    border: 1px solid rgb(206, 202, 202);
+} 
+.datos-contacto .informacion{
+    display: flex;
+    flex-direction: column;
+}
+.informacion .datos{
+    
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around ;
+    border-bottom:1px solid rgb(206, 202, 202);
+}
+.informacion .datos h2{
+    font-size: 1rem;
+    color: rgb(149, 102, 232);
+}
+.informacion .datos .info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.informacion .datos h3{
+    display: flex;
+    font-size: 1rem;
+    color: #FFC0C7;
+}
+.informacion .datos p{
+    font-size: 0.8rem;
+}
 @media (max-width: 550px) {
     header {
         flex-direction: column;
