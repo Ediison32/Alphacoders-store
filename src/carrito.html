@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a class="logo font-branch" href="./index.html">Rainbow Store</a>
+        <a class="logo font-branch" href="../index.html">Rainbow Store</a>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -22,38 +22,38 @@
         </nav>
     </header>
     <main class="carrito_main">
-        <section>
-            <table id="table">
-                <tr>
+        <section class="carrito-products" aria-labelledby="products-title">
+            <h2 id="products-title">Productos en el carrito</h2>
+
+            <table id="cartTable">
+                <thead>
+                    <tr>
                     <th>Producto</th>
                     <th>Precio</th>
                     <th>Cantidad</th>
                     <th>Subtotal</th>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="https://dulceria.co/wp-content/uploads/2019/08/jumbo-grande-individual-600x600.jpg" alt="Mango biche y Mango Maduro" />
-                        Mango biche y Mango Maduro</td>
-                    <td>7900</td>
-                    <td>1</td>
-                    <td>7900</td>
-                </tr>
-                </table>
+                    <th></th> <!-- Para botones de acción -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Productos generados por JavaScript -->
+                </tbody>
+            </table>
         </section>
-        <aside>
-            <h3>Totales del carrito</h3>
 
-            <h4>Subtotal</h4>
-            <hr>
-            <h4>Envio</h4>
+        <section class="carrito-summary" aria-labelledby="summary-title">
+            <h2 id="summary-title">Resumen del carrito</h2>
 
-            <div>
-                
+            <div class="summary-total">
+                <strong>Total</strong>
+                <strong id="cartTotal">$0</strong>
             </div>
-            <h3>Total</h3>
-            <button class="btn">Finalizar compra</button>
-        </aside>
-    </main>
+
+            <button class="btn btn-primary" id="checkoutBtn">Finalizar compra</button>
+        </section>
+
+        </main>
+
     <footer>
         <div>
             <a href="tel:+573243108603">+57 324 310 8603</a>
