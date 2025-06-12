@@ -19,6 +19,9 @@
     --bg-color-primary: #FFFAF2;
     --bg-light-purple: #DCBDFF;
     --bg-light-pink: #FFC0C7;
+    --bg-pink: #EB8D96;
+
+    --divider: #d4d0c9;
 
     --font-primary: "Inter", sans-serif;
     --font-secondary: "TAN Nimbus", sans-serif;
@@ -38,6 +41,18 @@ body {
 
 .font-branch {
     font-family: var(--font-secondary)
+}
+
+.btn {
+    text-transform: uppercase;
+    font-size: 1rem;
+    background: var(--bg-light-pink);
+    padding: 1rem;
+    flex: 1;
+    width: 100%;
+}
+.btn:hover {
+    background: var(--bg-pink);
 }
 
 header {
@@ -82,6 +97,59 @@ main {
     object-fit: cover;
 } 
 
+/* CARRITO */
+
+.carrito_main {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.carrito_main section{
+    flex: 1;
+}
+
+.carrito_main section table {
+    width: 100%;
+}
+
+.carrito_main section table tr {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.carrito_main section table td,
+.carrito_main section table th {
+    border-bottom: 1px solid var(--divider);
+    padding-block: 1rem;
+    padding-right: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.carrito_main section table td:nth-child(1),
+.carrito_main section table th:nth-child(1) {
+    grid-column: 1 / 3;
+}
+
+.carrito_main section table td:nth-last-child(1) {
+    padding-right: 0;
+}
+
+.carrito_main section table td img {
+    width: 100px;
+    border-radius: 1rem;
+    aspect-ratio: 1 / 1;
+}
+
+.carrito_main aside {
+    border: 2px solid;
+    border-color: var(--divider);
+    padding: 1rem;
+    flex: .5;
+}
+
 /* ==== FOOTER ==== */
 
 footer {
@@ -97,6 +165,12 @@ footer {
 footer div {
     display: flex;
     gap: 1rem;
+}
+
+@media (max-width: 900px) {
+    .carrito_main {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 550px) {
