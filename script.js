@@ -92,7 +92,7 @@ function deleteProduct(index) {
 // Inicializar
 function initCart() {
     const exists = localStorage.getItem('products');
-    alert(`Se agregó----> ${exists} `);
+    // alert(`Se agregó----> ${exists} `);
     if (!exists) {
         const defaultProducts = [
             {
