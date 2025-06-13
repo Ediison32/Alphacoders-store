@@ -12,18 +12,48 @@
 </head>
 <body>
     <header>
-        <a class="logo font-branch" href="./index.html">Rainbow Store</a>
+        <a class="logo font-branch" href="../index.html">Rainbow Store</a>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="#">Carrito</a></li>
                 <li><a href="#">Contáctame</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        
-    </main>
+    <main class="carrito_main">
+        <section class="carrito-products" aria-labelledby="products-title">
+            <h2 id="products-title">Productos en el carrito</h2>
+
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th></th> <!-- Para botones de acción -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Productos generados por JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="carrito-summary" aria-labelledby="summary-title">
+            <h2 id="summary-title">Resumen del carrito</h2>
+
+            <div class="summary-total">
+                <strong>Total</strong>
+                <strong id="cartTotal">$0</strong>
+            </div>
+
+            <button class="btn btn-primary" id="checkoutBtn">Finalizar compra</button>
+        </section>
+
+        </main>
+
     <footer>
         <div>
             <a href="tel:+573243108603">+57 324 310 8603</a>
