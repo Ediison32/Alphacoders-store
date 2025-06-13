@@ -135,17 +135,20 @@ main {
     background-color: white;
     padding: 20px;
     gap: 10px;
-
+    box-shadow: 8px 8px 15px #bebebe, -8px -8px 15px #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 14px;
 
     img {
         width: 200px;
-        height: auto;
+        height: 200px;
     }
     .buttons {
         display: flex;
         flex-direction: row;
         justify-items: center;
         gap: 6px;
+        
         a{
             background-color: #b699d8;
             padding: 3px;
@@ -154,6 +157,7 @@ main {
         a:hover {
             background-color: rgb(63, 63, 63);
             color: aliceblue;
+            transition: .3s;
         }
         ol {
             display: flex;
@@ -169,12 +173,19 @@ main {
             a{
                 background-color: white;
 
-            }
-
         }
+
     }
 }
-
+}
+.buttons ol input{
+    width: 40px;
+    text-align: center;
+}
+.product:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
 /* CARRITO */
 
 .carrito_main {
@@ -276,7 +287,27 @@ footer div {
 
 
 /*=====CONTACTAME======*/
-
+.horarios h2{
+    font-size: 1rem;
+    color: rgb(149, 102, 232);
+    margin: 15px 0px;
+}
+.horarios ul{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+.datos .fa-solid{
+    background-color: var(--bg-light-purple);
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 10px;
+}
+.section-contctanos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
 .contactanos{
     display: flex;
     justify-content: center;
@@ -285,6 +316,7 @@ footer div {
     max-width: 900px;
     margin-bottom: 331px;
     margin-inline: auto;
+    flex-direction: column;
 }
 .contactanos > * {
     flex: 1;
@@ -340,9 +372,17 @@ footer div {
     color: #FFC0C7;
 }
 .informacion .datos p{
-    font-size: 0.8rem;
+    font-size: 10px;
 }
-=======
+
+@media (max-width:1400px) {
+
+    .products{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+
 @media (max-width: 900px) {
     .carrito_main {
         flex-direction: column;
@@ -350,9 +390,22 @@ footer div {
 }
 
 
+
+@media (max-width:768px) {
+
+    .products{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
 @media (max-width: 550px) {
     header {
         flex-direction: column;
         gap: 1rem;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
