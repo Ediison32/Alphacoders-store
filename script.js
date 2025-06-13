@@ -92,7 +92,7 @@ function deleteProduct(index) {
 // Inicializar
 function initCart() {
     const exists = localStorage.getItem('products');
-
+    alert(`Se agregó----> ${exists} `);
     if (!exists) {
         const defaultProducts = [
             {
@@ -110,5 +110,47 @@ function initCart() {
     renderTable(products);
 }
 
+// guardar producto en local storage
+document.addEventListener("DOMContentLoaded", () => {
+    const productos = document.querySelectorAll(".product");
 
-initCart();
+    productos.forEach(producto =>{
+        const cantidadEl = producto.querySelector(".cantidad");
+        const btnAgregar = producto.querySelector(".agregar-producto");
+
+
+    btnAgregar.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const id = producto.id;
+        const name = producto.querySelector("h3").textContent;
+        const price_ = producto.querySelector("h2").textContent;
+        const price = parseInt(price_.replace(/\D/g, "")); 
+        const imagen = producto.querySelector("img").getAttribute("src");
+        const cantidad = parseInt(cantidadEl.value);
+
+        const item = { id, name, price, photo: imagen, amount: cantidad };
+        console.log(imagen);
+        
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        const index = carrito.findIndex(p => p.id === id);
+
+        if (index !== -1) {
+            carrito[index].amount = parseInt(carrito[index].amount) + cantidad;
+        } else {
+            carrito.push(item);
+        }
+
+        //localStorage.setItem('products', JSON.stringify(carrito)); se cambia products por el id
+        localStorage.setItem(id, JSON.stringify(carrito)); 
+        alert(`Se agregó ${cantidad} x ${name} al carrito`);
+
+        });
+    });
+    initCart();
+});
+
+
+
+
