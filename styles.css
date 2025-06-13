@@ -118,6 +118,62 @@ main {
     height: 100%;
     object-fit: cover;
 } 
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    gap: 40px;
+    width: max-content;
+    margin: 0 auto;
+    
+    
+}
+.product{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    gap: 10px;
+
+
+    img {
+        width: 200px;
+        height: auto;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        gap: 6px;
+        a{
+            background-color: #b699d8;
+            padding: 3px;
+
+        }
+        a:hover {
+            background-color: rgb(63, 63, 63);
+            color: aliceblue;
+        }
+        ol {
+            display: flex;
+            flex-direction: row;
+            li {
+                border-style: solid;
+                border-width: 1px;
+                border-color: black;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 4px;
+            }
+            a{
+                background-color: white;
+
+            }
+
+        }
+    }
+}
 
 /* CARRITO */
 
@@ -199,6 +255,7 @@ main {
     padding: 1rem;
     flex: .5;
 }
+
 
 /* ==== FOOTER ==== */
 
